@@ -73,6 +73,10 @@ public class Main {
       //inmo.cambiarPropiedadDeBarrio("Shelbyville 456", b1);
 
       
+        for (Propiedad p : inmo.listaPropMasBaratasXBarrio(Tipo.CASA)) {
+            
+            System.out.println(p);
+        }
      
         
     }

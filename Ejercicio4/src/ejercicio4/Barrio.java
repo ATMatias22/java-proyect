@@ -24,9 +24,9 @@ public class Barrio {
     public String getNombre() {
         return nombre;
     }
-    
-    public void agregarPropiedad(Propiedad p){
-        
+
+    public void agregarPropiedad(Propiedad p) {
+
         this.propiedades.add(p);
     }
 
@@ -38,7 +38,7 @@ public class Barrio {
             }
         }
     }
-    
+
     //FUNCION QUE AYUDA AL PUNTO C QUE ESTA EN INMOBILIARIA
     //RECORRE TODAS LAS PROPIEDADES DE UN BARRIO SIN NINGUN TIPO DE FILTRO
     public void mostrarPropiedades() {
@@ -56,11 +56,11 @@ public class Barrio {
     //funcion que ayuda al PUNTO E QUE ESTA EN INMOBILIARIA
     //BUSCA LA PROPIEDAD A ELIMINAR Y SI NO LA ENCUENTRA DEVUELVE NULL
     public Propiedad eliminarPropiedad(String domicilio) {
-        
+
         Propiedad encontrado = buscarDomicilioDePropiedad(domicilio);
-     
+
         if (encontrado != null) {
-        //borramos directamente en donde encuentre el objeto identico 
+            //borramos directamente en donde encuentre el objeto identico 
             Propiedad aux = encontrado;
             this.propiedades.remove(encontrado);
             return aux;
@@ -70,7 +70,47 @@ public class Barrio {
         }
 
     }
+
+//PUNTO EXTRA DEL EJERCICIO 4 MI SOLUCION (POCO EFICIENTE)
+    public Propiedad buscarPropiedadMasBarata(Tipo t) {
+        double min = 0;
+        Propiedad propMenorPrecio = null;
+        
+        for (int j = 0; j < cantidadPropiedades(); j++) {
+            if (propiedades.get(j).getTipo().equals(t)) {
+                if(propMenorPrecio == null){
+                    min = propiedades.get(j).getPrecio();
+                    propMenorPrecio = propiedades.get(j);
+                }else{
+                    if (propiedades.get(j).getPrecio() <= min) {
+                        propMenorPrecio = propiedades.get(j);
+                        min = propMenorPrecio.getPrecio();
+                    }
+                }
+            }
+        }
+        return propMenorPrecio;
+    }
     
+ //PUNTO EXTRA DEL EJERCICIO 4 SOLUCION DEL PROFE(MAS EFICIENTE)
+/*
+    public Propiedad buscarPropiedadMasBarata(Tipo t) {
+
+        Propiedad propMenorPrecio = null;
+        double min = Double.MAX_VALUE;
+        for (Propiedad propiedades : propiedades) {
+            if (propiedades.getTipo().equals(t)) {
+
+                if (propiedades.getPrecio() <= min) {
+                    propMenorPrecio = propiedades;
+                    min = propiedades.getPrecio();
+                }
+            }
+
+        }
+        return propMenorPrecio;
+    }
+*/
 //eN ESTE MOMENTO SOLO AYUDA A ELIMINARPROPIEDAD(STRING)
 //BUSCA UNA PROPIEDAD CON EL DOMICILIO PASADO POR PARAMETRO Y SI NO ENCUENTRA DEVUELVE NULL
     public Propiedad buscarDomicilioDePropiedad(String domicilio) {
@@ -92,8 +132,5 @@ public class Barrio {
     public String toString() {
         return "Barrio{" + "nombre=" + nombre + ", propiedades=" + propiedades + '}';
     }
-    
-    
-
 
 }
