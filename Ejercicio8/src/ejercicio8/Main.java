@@ -56,7 +56,6 @@ public class Main {
         a1.agregarMateriaAprobada(m6a1);
         a1.agregarMateriaAprobada(m7a1);
         
-        
         Materia m1a2 = new Materia("m1a2", 7,4);
         Materia m2a2 = new Materia("m2a2", 8,4);
         Materia m3a2 = new Materia("m3a2", 10,4);

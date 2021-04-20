@@ -1,0 +1,63 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>461</x><y>0</y><w>240</w><h>190</h></coordinates><panel_attributes>Autopista
+--
+-estacionDePeajes&lt;EstacionDePeaje&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>461</x><y>270</y><w>250</w><h>220</h></coordinates><panel_attributes>EstacionDePeaje
+--
+_-INCREMENTO_HORA_PICO:int = 8_
+_-HORA_PICO_INICIO_TEMP:int = 6_
+_-HORA_PICO_FIN_TEMP:int = 10_
+_-HORA_PICO_INICIO_TAR:int = 17_
+_-HORA_PICO_FIN_TAR:int = 20_
+-id:int
+-descripcion:String
+-cabinas:ArrayList&lt;Cabina&gt;
+--
+_+esHoraPico():boolean_
+_+dameHoraActual():int_
++cabinasConEfectivo():ArrayList&lt;Cabina&gt;
++promedioDemora():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>571</x><y>180</y><w>130</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+-estacionDePeajes
+m1=n</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>461</x><y>580</y><w>210</w><h>190</h></coordinates><panel_attributes>Cabina
+--
+-id:int
+-metodoDePago:MetodoDePago
+--
++cobrar(Vehiculo):double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>561</x><y>480</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+-cabinas
+m1=n</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>461</x><y>810</y><w>210</w><h>190</h></coordinates><panel_attributes>/MetodoDePago/
+--
+-descripcion:String
+--
+/+getDescuento():double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>561</x><y>760</y><w>120</w><h>70</h></coordinates><panel_attributes>lt=&lt;-
+-metodoDePago</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>271</x><y>1310</y><w>210</w><h>190</h></coordinates><panel_attributes>Sube
+--
+_-DESCUENTO_SUBE:double = 10_
+--
++getDescuento():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>541</x><y>1310</y><w>270</w><h>190</h></coordinates><panel_attributes>Pase
+--
+_-DESCUENTO_SUBE:double_
+_-DESCUENTO_MENOR_A_XDIAS: double = 15_
+_-DESCUENTO_MAYOR_A_XDIAS: double = 12_
+--
++getDescuento():double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>821</x><y>1040</y><w>210</w><h>190</h></coordinates><panel_attributes>Efectivo
+--
+--
++getDescuento():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>561</x><y>990</y><w>380</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;360;40;360;50</additional_attributes></element><element><id>Relation</id><coordinates><x>501</x><y>1220</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;160;40;160;90</additional_attributes></element><element><id>Relation</id><coordinates><x>361</x><y>1220</y><w>170</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;150;40;10;40;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>61</x><y>590</y><w>210</w><h>190</h></coordinates><panel_attributes>/Vehiculo/
+--
+-patente:String
+Categoria cat
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>600</y><w>220</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;200;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>401</x><y>1040</y><w>210</w><h>190</h></coordinates><panel_attributes>/ConDemora/
+--
+-diasDeDemoraEnElCobro:int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>511</x><y>990</y><w>80</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;60;40;10;40;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>61</x><y>870</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Categoria
+--
+_+AUTO(120)_
+_+CAMION(200)_
+_+MOTO(140)_
+-tarifa:double
+--
++getTarifa():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>151</x><y>770</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+-cat</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>

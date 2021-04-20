@@ -1,0 +1,15 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>220</x><y>310</y><w>210</w><h>190</h></coordinates><panel_attributes>/GrupoDeFiguras/
+--
+-color:String
+--
+/+area():double/
+/+perimetro():double/
++mostrarInfoDeFiguras():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>590</y><w>210</w><h>190</h></coordinates><panel_attributes>Circunferencia
+--
+-radio:double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>590</y><w>210</w><h>190</h></coordinates><panel_attributes>Rectangulo
+--
+-b:double
+-h:double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>590</y><w>210</w><h>190</h></coordinates><panel_attributes>TrianguloEquilatero
+--
+-lado:double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>490</y><w>230</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;210;60;210;100</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>490</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>490</y><w>250</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;10;230;60;10;60;10;100</additional_attributes></element></diagram>

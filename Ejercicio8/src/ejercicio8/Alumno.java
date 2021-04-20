@@ -24,7 +24,9 @@ public class Alumno {
     }
 
     public String getNombre() {
+        
         return nombre;
+      
     }
 
     public String getMail() {
