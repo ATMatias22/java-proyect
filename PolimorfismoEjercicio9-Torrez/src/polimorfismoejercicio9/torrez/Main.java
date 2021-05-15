@@ -40,7 +40,7 @@ public class Main {
 
 
         Barco b = new EmbarcacionDeportivaAMotor("abc", 2, 3123, "Matias", 120, 10);
-        Barco bar = new EmbarcacionDeportivaAMotor("123", 10, 2000, "Torrez", 10, 200);
+        Barco bar = new EmbarcacionDeportivaAMotor("123", 10, 2000, "Juan", 10, 200);
         Barco bar1 = new EmbarcacionDeportivaAMotorDeLujo("345", 20, 100, "Alejandro", 15, 300);
         Barco bar2 = new Velero("acd", 10, 2010, "Jose", 10);
         Barco bar3 = new EmbarcacionDeportivaAMotorDeLujo("c45", 15, 100, "Ariel", 11, 250);

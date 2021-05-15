@@ -36,6 +36,13 @@ public class Amarra {
         return this.barco == null;
     }
 
+    public Barco getBarco() {
+        return barco;
+    }
+    
+    
+    
+
     public void alquilar(Barco b) {
         if (estaDisponible()) {
             this.barco = b;

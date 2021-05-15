@@ -1,0 +1,54 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>230</y><w>250</w><h>190</h></coordinates><panel_attributes>Dia
+--
+_+PRIORIDAD_A_BUSCAR;int = 1_
+_+TEST_MAXIMOS:int = 50_
+-fecha:String
+-esDiaHabil:boolean
+-personas:ArrayList&lt;Persona&gt;
+--
++cantidadDeInscriptos():double
++alcanzanLosTest():boolean
++cantidadDePersonasConPrioridadIgualA():int
++promedioEdadPersonasSinOS
+():double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>540</y><w>210</w><h>190</h></coordinates><panel_attributes>Persona
+--
+_+EDAD_PRIORITARIA:int = 60_
+-dni:String
+-nombre:String
+-apellido:String
+-edad:int
+-motivoDelTest:Motivo
+-obraSocial:Credencial</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>0</y><w>280</w><h>190</h></coordinates><panel_attributes>Centro
+--
+-dias:ArrayList&lt;Dia&gt;
+--
++mostrarDiaConMasPrioritarios()::void
++revisar():double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>410</y><w>80</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+-personas
+m1=50</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>700</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Motivo
+--
+_+CONTACT_ESTRECHO_
+_+VIAJE_
+_+REPETICION_POR_ERROR_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>620</y><w>220</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+-motivo</panel_attributes><additional_attributes>160;80;160;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>260</y><w>210</w><h>190</h></coordinates><panel_attributes>Credencial
+--
+-nombre:String
+-nroAfiliado:int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>440</y><w>260</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+0:1
+-obraSocial</panel_attributes><additional_attributes>180;10;180;150;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>750</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Priorizable
+--
+--
++tieneObraSocial():boolean
++esMayorOIgualA():boolean
++tuvoContactoEstrecho:boolean
++tienePrioridad():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>640</y><w>130</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;110;10;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>350</y><w>210</w><h>190</h></coordinates><panel_attributes>Notificable
+--
+--
++mensaje(String):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>80</y><w>100</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+m1=n
+-dias</panel_attributes><additional_attributes>10;150;10;10;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>530</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;90;120;90</additional_attributes></element></diagram>

@@ -41,7 +41,7 @@ public class Puerto {
         double consumo = 0;
         for (Amarra a : amarras) {
             if (a.consumoDelBarco() > consumo) {
-//                barcoMayorConsumo = a.getBarco();
+                barcoMayorConsumo = a.getBarco();
                 consumo = a.consumoDelBarco();
             }
         }
